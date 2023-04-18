@@ -1,5 +1,5 @@
 {
     "yaml.schemas": {
-        "kubernetes://schema/apps/v1%40deployment": "file:///d%3A/Courses/ND%20Full%20Stack%20Web%20Developer/Server-Deployment-and-Containerization/simple_jwt_api.yml"
+        "kubernetes://schema/v1%40service": "file:///d%3A/Courses/ND%20Full%20Stack%20Web%20Developer/Server-Deployment-and-Containerization/simple_jwt_api.yml"
     }
 }
