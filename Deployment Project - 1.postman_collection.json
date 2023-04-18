@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "9e8b31f6-ac7b-4c7e-b261-3242a86fbbef",
+		"name": "Deployment Project - 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"abc@xyz.com\",\"password\":\"WindowsPwd\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://a9b05e89ab0a74ad486e866048f951f7-2105298700.us-east-2.elb.amazonaws.com/auth",
+					"protocol": "http",
+					"host": [
+						"a9b05e89ab0a74ad486e866048f951f7-2105298700",
+						"us-east-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"abc@xyz.com\",\"password\":\"WindowsPwd\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://a9b05e89ab0a74ad486e866048f951f7-2105298700.us-east-2.elb.amazonaws.com/auth",
+							"protocol": "http",
+							"host": [
+								"a9b05e89ab0a74ad486e866048f951f7-2105298700",
+								"us-east-2",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "gunicorn/20.0.4"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Apr 2023 08:19:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "170"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODMwMTU1NzksIm5iZiI6MTY4MTgwNTk3OSwiZW1haWwiOiJhYmNAeHl6LmNvbSJ9.lK7h-SiCK945jPX_2gqsy1YMbqAK6lE4d0uuHfEPfEI\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8083/contents",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODI5MTc2NzYsIm5iZiI6MTY4MTcwODA3NiwiZW1haWwiOiJhYmNAeHl6LmNvbSJ9.EguKHWctohsXggIuMBSW-wUQ1hYWMoM4f5PtOHs9PQQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/contents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"contents"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8083/contents",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://a9b05e89ab0a74ad486e866048f951f7-2105298700.us-east-2.elb.amazonaws.com/contents",
+							"protocol": "http",
+							"host": [
+								"a9b05e89ab0a74ad486e866048f951f7-2105298700",
+								"us-east-2",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"contents"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "gunicorn/20.0.4"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Apr 2023 08:20:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"abc@xyz.com\",\n    \"exp\": 1683015579,\n    \"nbf\": 1681805979\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://a9b05e89ab0a74ad486e866048f951f7-2105298700.us-east-2.elb.amazonaws.com",
+					"protocol": "http",
+					"host": [
+						"a9b05e89ab0a74ad486e866048f951f7-2105298700",
+						"us-east-2",
+						"elb",
+						"amazonaws",
+						"com"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://a9b05e89ab0a74ad486e866048f951f7-2105298700.us-east-2.elb.amazonaws.com",
+							"protocol": "http",
+							"host": [
+								"a9b05e89ab0a74ad486e866048f951f7-2105298700",
+								"us-east-2",
+								"elb",
+								"amazonaws",
+								"com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "gunicorn/20.0.4"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Apr 2023 08:21:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10"
+						}
+					],
+					"cookie": [],
+					"body": "\"Healthy\""
+				}
+			]
+		}
+	]
+}
